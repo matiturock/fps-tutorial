@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://p6m40y43ynfs"]
+
+[ext_resource type="Script" path="res://tutorial/characters/player/player.gd" id="1_jf14i"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qceec"]
+height = 1.8
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.41621, 0)
+script = ExtResource("1_jf14i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_qceec")
+
+[node name="MainCamera" type="Camera3D" parent="."]
